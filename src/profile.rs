@@ -736,6 +736,13 @@ impl Profile {
             for pair in self.cultivar_parameters.iter().enumerate() {
                 VarPar[pair.0 + 1] = *pair.1;
             }
+
+            // Add a print statement here to debug cultivar_parameters
+            println!("Cultivar Parameters: {:?}", self.cultivar_parameters);
+
+            // Check if the cultivar parameters are assigned correctly to VarPar
+            println!("VarPar: {:?}", &VarPar[..self.cultivar_parameters.len() + 1]);
+
             RowSpace = if self.skip_row_width > 0. {
                 (self.row_space + self.skip_row_width) / 2.
             } else {
