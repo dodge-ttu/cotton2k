@@ -669,6 +669,8 @@ impl Profile {
     }
 
     pub fn initialize(self: &mut Self) -> Result<(), Box<dyn std::error::Error>> {
+        println!("initialize() called");
+
         self.lmax = 0.;
         self.num_watertable_data = 0;
         unsafe {
