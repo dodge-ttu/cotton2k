@@ -103,7 +103,7 @@ pub struct Profile {
     pub weather_path: PathBuf,
     pub soil_impedance: Option<PathBuf>,
     pub site: Site,
-    pub cultivar_parameters: Vec<f64>,
+    pub cultivar_parameters: Option<Vec<f64>>,
     pub row_space: f64,
     #[serde(default = "zero")]
     pub skip_row_width: f64,
